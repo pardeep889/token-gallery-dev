@@ -1,0 +1,27 @@
+{
+  "name": "marketplace-node-microservice",
+  "version": "1.0.0",
+  "description": "This repo contains cronJobs for fetching and syncing blockchain data of NFTMarketplace Smart Contract with MySQL DB",
+  "scripts": {
+    "syncBlockchainData": "$(which node) cronJobs/syncBlockchainData.js",
+    "finishAuction": "$(which node) cronJobs/finishAuction.js",
+    "syncContract": "$(which node) scripts/syncContractDetailsToDB.js",
+    "lint": "eslint ."
+  },
+  "author": "Karan Siddhpura",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.6.8",
+    "express": "^4.18.1",
+    "js-sha3": "^0.8.0",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "nodemon": "^2.0.16"
+  }
+}
